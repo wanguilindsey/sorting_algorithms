@@ -78,6 +78,14 @@ void bitonic_deep_up(int *array_init, int *array,
 	bitonic_deep_down(array_init, array + (size / 2), size_init, size / 2, flag);
 	compare_swap_down(array_init, array, size_init, size, flag);
 }
+/**
+ * bitonic_sort - Provides a Bitonic Sort algorithm implementation in C.
+ *                    The algorithm recursively sorts and merges subarrays in a
+ *                    bitonic sequence, alternating between ascending and
+ *                    descending phases.
+ * @array: The input array to be sorted.
+ * @size:  The size of the array.
+ **/
 void bitonic_sort(int *array, size_t size)
 {
 	size_t size_init = size;
