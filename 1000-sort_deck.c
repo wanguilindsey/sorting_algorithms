@@ -1,5 +1,5 @@
 #include "deck.h"
-#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -32,6 +32,7 @@ void sort_deck(deck_node_t **deck)
 	size_t count = 0;
 	deck_node_t *current = *deck;
 	card_t *cards[52];
+	size_t i;
 
 	while (current)
 	{
@@ -42,7 +43,7 @@ void sort_deck(deck_node_t **deck)
 	qsort(cards, count, sizeof(card_t *), compare_cards);
 
 	current = *deck;
-	for (size_t i = 0; i < count; ++i)
+	for (i = 0; i < count; ++i)
 	{
 		current->card = cards[i];
 		current = current->next;
