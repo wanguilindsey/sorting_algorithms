@@ -55,7 +55,7 @@ void bitonic_deep_down(int *array_init, int *array,
 	}
 	printf("Merging [%lu/%lu] (DOWN):\n", size, size_init);
 	print_array(array, size);
-	bitonic_deep_up(array_init, array, size_init, size / 2, flag);
+	bitonic_deep_down(array_init, array, size_init, size / 2, flag);
 	compare_swap_up(array_init, array, size_init, size, flag);
 	bitonic_deep_down(array_init, array + (size / 2), size_init, size / 2, flag);
 	compare_swap_down(array_init, array, size_init, size, flag);
